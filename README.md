@@ -1,4 +1,10 @@
-# WebApi
+# WebApiForAzure
+Aplikacja udostępniona na chmurze Azure, to jest wersja programu która jest raze z aplikacją Frontendowa.
+Link do niej : https://product-api-app.azurewebsites.net/swagger/index.html
+Można się z nią też połączyć z aplikacji Frontend tylko trzeba zmienić w katalogu FrontEndApp/Utilites/HelperHttpClient trzeba zmienić adres uri na : private const string uri = @"https://product-api-app.azurewebsites.net/"; // azure connection
+ => wtedy tylko uruchomić aplikacje FrontEnd i można działać.  Już jest nawet dostępne konto email: patrykprusko@gmail.com, password: password1 , można przetestować. Link do Aplikacj Frontend : https://github.com/PatrykPrusko2019/FrontEndApp.git
+ 
+
 Aby uruchomić aplikacje to gdy się pobierze z Githuba, to trzeba ustawić połączenie z serverem MS_SQL, uruchomić aplikacje, użyć endpointa api/file -> najpierw pobiera 3 pliki CSV do pliku FilesCSV, potem pobiera z nich odpowiednie rekordy do bazy danych. Następnie powinien automatycznie wykryć brak połączenia z daną bazą, więc tworzy nową bazę danych "ProjectWebApiDb", potem tworzy 3 puste tablice: Products, Prices, Inventories, później je wypełnia danymi rekordami. Jeśli tak się nie połączy to użyć sposób poniższy z komendą update-database.
 
 Aby uruchomić aplikacje trzeba pobrać z githuba, ustawić połączenie z bazą danych MS_SQL wartość ProductsDbContext z appsettings.Developer.json.
